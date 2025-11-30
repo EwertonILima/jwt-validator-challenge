@@ -1,0 +1,132 @@
+# ==========================================
+# Java & JVM
+# ==========================================
+*.class
+*.log
+*.ctxt
+*.jar
+*.war
+*.nar
+*.ear
+*.zip
+*.tar.gz
+*.rar
+
+# Virtual Machine crash logs
+hs_err_pid*
+replay_pid*
+
+# ==========================================
+# Gradle
+# ==========================================
+HELP.md
+.gradle/
+build/
+out/
+
+# Local Gradle wrapper files (cache, logs)
+!gradle/wrapper/gradle-wrapper.jar
+
+# Gradle caches
+**/build/
+**/.gradle/
+
+# Ignore Gradle GUI config
+gradle-app.setting
+
+# ==========================================
+# Spring Boot
+# ==========================================
+# Local application properties
+application-local.properties
+application-local.yml
+*.h2.db
+*.mv.db
+
+# Embedded server working directory
+spring.log
+
+# ==========================================
+# IntelliJ / JetBrains
+# ==========================================
+.idea/
+*.iml
+*.ipr
+*.iws
+out/
+
+# IntelliJ specific cache folders
+.idea/**/workspace.xml
+.idea/**/tasks.xml
+.idea/**/usage.statistics.xml
+.idea/**/dictionaries
+.idea/**/shelf
+
+# IntelliJ generated files
+.idea/**/libraries
+.idea/**/modules.xml
+.idea/**/compiler.xml
+.idea/**/jarRepositories.xml
+
+# ==========================================
+# VSCode (caso abra o projeto lá)
+# ==========================================
+.vscode/
+
+# ==========================================
+# OS-specific files
+# ==========================================
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+Icon
+._*
+
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# Linux
+*~
+
+# ==========================================
+# Logs
+# ==========================================
+*.log
+logs/
+**/logs/
+
+# ==========================================
+# Other typical ignores
+# ==========================================
+# Backup files
+*.bak
+*.tmp
+*.swp
+
+# Generated metadata
+.mvn
+apache-maven*
+target/
+
+# Ignore temporary files created by editors
+*.orig
+
+# ==========================================
+# TEST COVERAGE tools
+# ==========================================
+# Jacoco
+jacoco.exec
+jacoco-report/
+
+# IntelliJ coverage
+.idea/**/coverage/
+
+# ==========================================
+# Docker
+# ==========================================
+/docker-data/
+/docker/volumes/
