@@ -2,7 +2,7 @@ package com.ewertonilima.jwtvalidator.integration;
 
 import com.ewertonilima.jwtvalidator.domain.JwtValidationUseCase;
 import com.ewertonilima.jwtvalidator.domain.port.JwtDecoderPort;
-import com.ewertonilima.jwtvalidator.infra.JacksonJwtDecoderAdapter;
+import com.ewertonilima.jwtvalidator.infra.out.jwt.JacksonJwtDecoderAdapter;
 import org.junit.jupiter.api.Test;
 import tools.jackson.databind.ObjectMapper;
 
