@@ -1,0 +1,188 @@
+{
+	"info": {
+		"_postman_id": "553d2209-ff6c-4130-9e73-373c1087ea3a",
+		"name": "JWT Validator Local API",
+		"description": "Collection para testar a API local de validação de JWT.\nEndpoint: GET /api/v1/jwt/validate?token=...",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "17602729"
+	},
+	"item": [
+		{
+			"name": "Caso 1 - Token válido (deve retornar verdadeiro)",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json"
+					}
+				],
+				"url": {
+					"raw": "{{baseUrl}}/api/v1/jwt/validate?token={{tokenCaso1}}",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"jwt",
+						"validate"
+					],
+					"query": [
+						{
+							"key": "token",
+							"value": "{{tokenCaso1}}"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Caso 2 - JWT inválido (deve retornar falso)",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json"
+					}
+				],
+				"url": {
+					"raw": "{{baseUrl}}/api/v1/jwt/validate?token={{tokenCaso2}}",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"jwt",
+						"validate"
+					],
+					"query": [
+						{
+							"key": "token",
+							"value": "{{tokenCaso2}}"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Caso 3 - Name com dígitos (deve retornar falso)",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json"
+					}
+				],
+				"url": {
+					"raw": "{{baseUrl}}/api/v1/jwt/validate?token={{tokenCaso3}}",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"jwt",
+						"validate"
+					],
+					"query": [
+						{
+							"key": "token",
+							"value": "{{tokenCaso3}}"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Caso 4 - Mais de 3 claims (deve retornar falso)",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json"
+					}
+				],
+				"url": {
+					"raw": "{{baseUrl}}/api/v1/jwt/validate?token={{tokenCaso4}}",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"jwt",
+						"validate"
+					],
+					"query": [
+						{
+							"key": "token",
+							"value": "{{tokenCaso4}}"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Token vazio (deve retornar falso)",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json"
+					}
+				],
+				"url": {
+					"raw": "{{baseUrl}}/api/v1/jwt/validate?token=",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"jwt",
+						"validate"
+					],
+					"query": [
+						{
+							"key": "token",
+							"value": ""
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"variable": [
+		{
+			"key": "baseUrl",
+			"value": "http://localhost:8080"
+		},
+		{
+			"key": "tokenCaso1",
+			"value": "eyJhbGciOiJIUzI1NiJ9.eyJSb2xlIjoiQWRtaW4iLCJTZWVkIjoiNzg0MSIsIk5hbWUiOiJUb25pbmhvIEFyYXVqbyJ9.QY05sIjtrcJnP533kQNk8QXcaleJ1Q01jWY_ZzIZuAg"
+		},
+		{
+			"key": "tokenCaso2",
+			"value": "eyJhbGciOiJzI1NiJ9.dfsdfsfryJSr2xrIjoiQWRtaW4iLCJTZrkIjoiNzg0MSIsIk5hbrUiOiJUb25pbmhvIEFyYXVqbyJ9.QY05fsdfsIjtrcJnP533kQNk8QXcaleJ1Q01jWY_ZzIZuAg"
+		},
+		{
+			"key": "tokenCaso3",
+			"value": "eyJhbGciOiJIUzI1NiJ9.eyJSb2xlIjoiRXh0ZXJuYWwiLCJTZWVkIjoiODgwMzciLCJOYW1lIjoiTTRyaWEgT2xpdmlhIn0.6YD73XWZYQSSMDf6H0i3-kylz1-TY_Yt6h1cV2Ku-Qs"
+		},
+		{
+			"key": "tokenCaso4",
+			"value": "eyJhbGciOiJIUzI1NiJ9.eyJSb2xlIjoiTWVtYmVyIiwiT3JnIjoiQlIiLCJTZWVkIjoiMTQ2MjciLCJOYW1lIjoiVmFsZGlyIEFyYW5oYSJ9.cmrXV_Flm5mfdpfNUVopY_I2zeJUy4EZ4i3Fea98zvY"
+		}
+	]
+}
